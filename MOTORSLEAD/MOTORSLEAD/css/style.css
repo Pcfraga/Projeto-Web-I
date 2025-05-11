@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    height: 6.25rem;
+}
+
+.nav li , a{
+    color: white;
+    font-size: 1.375rem;
+    list-style: none;
+    text-decoration: none;
+}
+
+.nav{
+    display: flex;
+    gap: 3.125rem;
+}
+
+.nav-search{
+    margin-right: 3.125rem;
+}
+
+.nav-search input, button{
+    padding: 0.625rem;
+    border-radius: 1.25rem;
+    border: 0.125rem solid rebeccapurple;
+    font-size: 1rem;
+}
+
+.nav-search button{
+    background-color: blueviolet;
+    color: white;
+    cursor: pointer;
+}
+
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;margin: 0;
+}
+body{
+    background-image: url(../img/fundobody.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;    
+}
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.4); /* branco com 40% de opacidade */
+    z-index: 0;
+  }
+  /* Conteúdo do body precisa estar acima da camada */
+body * {
+    position: relative;
+    z-index: 1;
+  }
+  header{
+    display: flex;
+    gap: 250px;
+  }
+.maior{
+    width: 1000px;
+    height: 900px;
+    background-color: red;
+    margin-left: 200px;
+    margin-top: 250px; 
+    background: linear-gradient(to bottom, #700505, #ffffff);
+}
+.maior h1{
+    text-align: center;
+    padding-top: 50px;
+    color: white;
+    font-weight: 700;
+    
+}
+
+.foto {
+    width: 80%;         /* ou 100% se estiver dentro de um container fixo */
+    height: 400px;        /* padronize conforme sua necessidade */
+    object-fit: cover;    /* preenche o espaço cortando o excesso */
+    display: block;   /* evita espaços extras */
+    margin-left: 80px;
+    padding: 20px;
+    
+}
+   
+.form-container {
+    background: #e0e0e0;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #ccc;
+    width: 500px;
+    margin-top: 250px;
+    margin-bottom: 200px;
+   
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 50px;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .btn {
+    width: 100%;
+    background-color: #0b0b0a;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .btn:hover {
+    background-color: #188727;
+  }
+
+  .bottom-text {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+  }
+
+  .bottom-text a {
+    color: #188727;
+    text-decoration: none;
+  }
+
+  .bottom-text a:hover {
+    text-decoration: underline;
+  }

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MotorsLead</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" />
+  
+  <style>
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+    }
+    .card-item {
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
+    <a class="navbar-brand" href="#">MotorsLead</a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+        <li class="nav-item"><a class="nav-link" href="galeria.html">Galeria</a></li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Pesquisar" />
+        <button class="btn btn-outline-light">Pesquisar</button>
+      </form>
+    </div>
+  </nav>
+
+  <!-- Filtro de categorias -->
+  <div class="container mt-4">
+    <div class="row mb-3">
+      <div class="col-md-4">
+        <select id="filtroCategoria" class="form-select">
+          <option value="todos">Todos</option>
+          <option value="carro">Carros</option>
+          <option value="moto">Motos</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Galeria de Cards -->
+    <div class="row" id="galeriaCards">
+
+      <div class="col-sm-6 col-md-4 col-lg-3 card-item" data-categoria="carro">
+        <div class="card">
+          <img src="img/auge.jpg" class="card-img-top" alt="Auge">
+          <div class="card-body">
+            <h5 class="card-title">Auge, 2023</h5>
+            <p class="card-text">Econômico, confortável, R$30mil</p>
+            <a href="#" class="btn btn-primary">Visualizar</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4 col-lg-3 card-item" data-categoria="carro">
+        <div class="card">
+          <img src="img/camaro.jpg" class="card-img-top" alt="Camaro">
+          <div class="card-body">
+            <h5 class="card-title">Camaro Lançamento</h5>
+            <p class="card-text">Ano 2025, R$40mil</p>
+            <a href="#" class="btn btn-primary">Visualizar</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4 col-lg-3 card-item" data-categoria="moto">
+        <div class="card">
+          <img src="img/kavajaski.jpeg" class="card-img-top" alt="Moto">
+          <div class="card-body">
+            <h5 class="card-title">Moto, 2022</h5>
+            <p class="card-text">Passeio, econômica, R$40mil</p>
+            <a href="#" class="btn btn-primary">Visualizar</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4 col-lg-3 card-item" data-categoria="moto">
+        <div class="card">
+          <img src="img/motoesportiva.jpg" class="card-img-top" alt="Moto Esportiva">
+          <div class="card-body">
+            <h5 class="card-title">Moto Lançamento</h5>
+            <p class="card-text">Ano 2025, R$50mil</p>
+            <a href="#" class="btn btn-primary">Visualizar</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4 col-lg-3 card-item" data-categoria="moto">
+        <div class="card">
+          <img src="img/xre.jpg" class="card-img-top" alt="XRE">
+          <div class="card-body">
+            <h5 class="card-title">XRE, 2025</h5>
+            <p class="card-text">Passeio, R$45mil</p>
+            <a href="#" class="btn btn-primary">Visualizar</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4 col-lg-3 card-item" data-categoria="carro">
+        <div class="card">
+          <img src="img/camarobranco.jpg" class="card-img-top" alt="Camaro Branco">
+          <div class="card-body">
+            <h5 class="card-title">Camaro Branco</h5>
+            <p class="card-text">Ano 2025, R$60mil</p>
+            <a href="#" class="btn btn-primary">Visualizar</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Paginação -->
+    <nav aria-label="Page navigation">
+      <ul class="pagination justify-content-center mt-4">
+        <li class="page-item disabled">
+          <a class="page-link">Anterior</a>
+        </li>
+        <li class="page-item active">
+          <a class="page-link" href="#">1</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#">2</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#">3</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link">Próximo</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Script do filtro -->
+  <script>
+    const filtro = document.getElementById("filtroCategoria");
+    const cards = document.querySelectorAll(".card-item");
+
+    filtro.addEventListener("change", () => {
+      const categoriaSelecionada = filtro.value;
+
+      cards.forEach(card => {
+        const categoria = card.getAttribute("data-categoria");
+
+        if (categoriaSelecionada === "todos" || categoria === categoriaSelecionada) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    });
+  </script>
+</body>
+</html>

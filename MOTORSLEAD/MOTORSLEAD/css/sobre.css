@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    height: 6.25rem;
+}
+
+.nav li , a{
+    color: white;
+    font-size: 1.375rem;
+    list-style: none;
+    text-decoration: none;
+}
+
+.nav{
+    display: flex;
+    gap: 3.125rem;
+}
+
+.nav-search{
+    margin-right: 3.125rem;
+}
+
+.nav-search input, button{
+    padding: 0.625rem;
+    border-radius: 1.25rem;
+    border: 0.125rem solid rebeccapurple;
+    font-size: 1rem;
+}
+
+.nav-search button{
+    background-color: blueviolet;
+    color: white;
+    cursor: pointer;
+}
+
+
+.main img{
+    width: 200px;
+    height: 200px;
+    margin-bottom: 15px;
+   
+}
+
+.main{
+    padding: 50px;
+    display: flex;
+    gap: 30px;
+}
+
+.main-text{
+    text-align: justify;
+    width: 300px;
+    font-size: 20px;
+
+}
+
+.main-text h1{
+    margin-bottom: 20px;
+}
+
+body{
+    background-image: url(../img/fundobody.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;    
+}
+    body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.4); /* branco com 40% de opacidade */
+    z-index: 0;
+  }
+  /* Conteúdo do body precisa estar acima da camada */
+    body * {
+    position: relative;
+    z-index: 1;
+  }
+
+
+h1{
+    font-size: 20px;
+    margin-top: 30px;
+    padding: 15px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: arial;
+    text-decoration: black;
+}
+
+h2{
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+    padding: 20px;
+    font-size: 35px;
+    text-align: center;
+    text-decoration: underline;
+    
+}
+
+img{
+    width: 200px;
+    height: 200px;
+    margin: 5vh;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10vh;
+}
+

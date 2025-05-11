@@ -1,0 +1,58 @@
+.main img{
+    width: 200px;
+    height: 200px;
+ 
+}
+
+.main{
+    padding: 50px;
+    display: flex;
+    gap: 30px;
+}
+
+.main-text{
+    text-align: justify;
+    width: 300px;
+    font-size: 20px;
+
+}
+
+.main-text h1{
+    margin-bottom: 20px;
+}
+
+.sectioncard1, .sectioncard2, .sectioncard3{
+    display: block;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    margin-bottom: 20px;
+    width: 100px;
+    height: 100px;
+    gap: 20px;
+    padding: 15px;
+}
+
+    
+   
+
+.sectioncard4, .sectioncard5, .sectioncard6{
+    display: block;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    margin-bottom: 20px;
+    width: 100px;
+    height: 100px;
+    text-decoration: white;
+    gap: 20px;
+    padding: 15px;
+    margin-top: 15px;
+}
+.grid-galeria{
+    display: flex;
+}
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+  }
